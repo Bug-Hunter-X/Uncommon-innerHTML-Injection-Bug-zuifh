@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+  <script>
+    //Correct way using DOM manipulation to avoid innerHTML issues
+    const newHeading = document.createElement("h1");
+    newHeading.textContent = "This is a heading";
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "This is a paragraph.";
+    const myDiv = document.getElementById("myDiv");
+    myDiv.innerHTML = '';
+    myDiv.appendChild(newHeading);
+    myDiv.appendChild(newParagraph);
+  </script>
+</body>
+</html>
