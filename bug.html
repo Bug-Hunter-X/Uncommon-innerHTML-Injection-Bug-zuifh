@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+  <script>
+    //Incorrect way to replace innerHTML with a string containing HTML
+    document.getElementById("myDiv").innerHTML = "<h1>This is a heading</h1><p>This is a paragraph.</p>";
+  </script>
+</body>
+</html>
